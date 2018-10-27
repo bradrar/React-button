@@ -1,0 +1,49 @@
+
+
+.controls {
+  position: relative;
+  left: 100px;
+  bottom: 20px;
+}
+
+h1 {
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+$Whitesmoke: whitesmoke ;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: $Whitesmoke;
+}
+
+.center {
+  margin: 0 auto;
+  width: 500px; 
+  margin-top: 50px;
+}
+
+ol {
+     margin: auto;
+     width: 300px;
+}
+
+button {
+  background-color:#008CBA;
+  border: none;
+  color: $Whitesmoke;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 2px 0 2px;
+}
+
+:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

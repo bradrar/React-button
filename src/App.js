@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+// eslint-disable-next-line
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 
 
-function buttonUp(arr, fromIndex, toIndex) {
-  var element = arr[fromIndex];
-  arr.splice(fromIndex, 1);
-  arr.splice(toIndex, 0, element);
-  return arr;
-}
+
 
 class App extends React.Component {
 	constructor(props){
@@ -29,6 +25,13 @@ class App extends React.Component {
     // we don't want to reference the actual state and mutate it! 😱
     const shoppingList = [...this.state.shoppingList]
 
+    function buttonUp(arr, fromIndex, toIndex) {
+      var element = arr[fromIndex];
+      arr.splice(fromIndex, 1);
+      arr.splice(toIndex, 0, element);
+      return arr;
+    }
+
     if (dir === "up" ){
       this.setState({
         shoppingList: buttonUp(shoppingList, currentIndex , currentIndex - 1) 
@@ -43,14 +46,14 @@ class App extends React.Component {
   
   render() {
     return( 
-      <div>
+      <div className="center">
         <h1>ReactJS button functionality</h1>
 
         <p>Goal:
 
 Add functionality to the buttons on the list so that when UP is clicked the list item swaps with the item directly on top of it.
-
-When DOWN is pressed, the list item should swap with the item directly bellow it.
+<br/>
+When DOWN is pressed, the list item should swap with the item directly below it.
  </p>
         <ol>
           {this.state.shoppingList.map((item, index) =>
