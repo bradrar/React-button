@@ -2,13 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-/*
-Challenge Goal:
 
-Add functionality to the buttons on the list so that when UP is clicked the list item swaps with the item directly on top of it.
-
-When DOWN is pressed, the list item should swap with the item directly bellow it.
-*/
 
 function buttonUp(arr, fromIndex, toIndex) {
   var element = arr[fromIndex];
@@ -50,7 +44,14 @@ class App extends React.Component {
   render() {
     return( 
       <div>
-        <h1>UNUM Challenge</h1>
+        <h1>ReactJS button functionality</h1>
+
+        <p>Goal:
+
+Add functionality to the buttons on the list so that when UP is clicked the list item swaps with the item directly on top of it.
+
+When DOWN is pressed, the list item should swap with the item directly bellow it.
+ </p>
         <ol>
           {this.state.shoppingList.map((item, index) =>
             	(<li data-index = {index} key={index}>
